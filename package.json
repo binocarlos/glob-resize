@@ -1,0 +1,35 @@
+{
+  "name": "glob-resize",
+  "version": "0.0.0",
+  "description": "resize images matching a file glob and write them to a target folder",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/binocarlos/glob-resize.git"
+  },
+  "keywords": [
+    "image",
+    "resize",
+    "glob"
+  ],
+  "author": "Kai Davenport",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/binocarlos/glob-resize/issues"
+  },
+  "homepage": "https://github.com/binocarlos/glob-resize",
+  "devDependencies": {
+    "wrench": "^1.5.8",
+    "tape": "^2.13.3",
+    "image-size": "^0.3.2"
+  },
+  "dependencies": {
+    "async": "^0.9.0",
+    "imagemagickresizer": "^1.0.1",
+    "mkdirp": "^0.5.0",
+    "globby": "^0.1.1"
+  }
+}
