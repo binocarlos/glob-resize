@@ -12,7 +12,8 @@ wrench.rmdirSyncRecursive(target, true)
 
 tape('resize the images', function(t){
 	
-	resize(src, '**/*.jpg', target, '100x100', function(err){
+	var paths = {}
+	var r = resize(src, '**/*.jpg', target, '100x100', function(err){
 		if(err){
 			t.fail(err, 'resize')
 			t.end()
@@ -29,7 +30,14 @@ tape('resize the images', function(t){
 		t.equal(dimensions.width, 100, '100 width')
 		t.equal(dimensions.height, 100, '100 height')
 
+		t.equal(paths['car.jpg'], '100x100', 'car path')
+		t.equal(paths['subfolder/balloons.jpg'], '100x100', 'balloons path')
+		
 		t.end()
 
+	})
+
+	r.on('image', function(path, size){
+		paths[path] = size
 	})
 })
