@@ -1,6 +1,6 @@
 {
   "name": "glob-resize",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "resize images matching a file glob and write them to a target folder",
   "main": "index.js",
   "scripts": {
